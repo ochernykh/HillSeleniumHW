@@ -35,7 +35,7 @@ public class TestExample {
     }
 
     @Test
-    public void checkMostViewedCourses(){
+    public void checkCoursesSortingButton(){
         driver.get("https://udemy.com/ru/");
         driver.manage().window().maximize();
         WebElement inputFieldId = driver.findElement(By.id("header-search-field"));

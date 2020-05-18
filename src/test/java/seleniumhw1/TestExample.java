@@ -41,10 +41,11 @@ public class TestExample {
         WebElement inputFieldId = driver.findElement(By.id("header-search-field"));
         inputFieldId.sendKeys("java ");
         driver.findElement(By.className("input-group-btn")).submit();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         Select select = new Select(driver.findElement(By.id("sort-select")));
         select.selectByValue("most-reviewed");
         Assert.assertEquals(select.getFirstSelectedOption().getText(), "Больше всего отзывов");
+        driver.findElement(By.xpath("//input[@value='beginner' and @type='checkbox']")).click();
     }
 
     @AfterClass

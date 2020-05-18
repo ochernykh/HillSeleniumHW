@@ -33,9 +33,11 @@ public class HomeWork18 {
         }else if (browser.equals("firefox")){
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
+            waiter = new WebDriverWait(driver,10);
         }else if (browser.equals("ie")){
             WebDriverManager.iedriver().setup();
             driver = new InternetExplorerDriver();
+            waiter = new WebDriverWait(driver,10);
         }
     }
 
